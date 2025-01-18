@@ -34,5 +34,15 @@ input_file = 'Test1_report_processed_data_timestamps.csv'
 classifications = load_and_classify_data(input_file)
 print("Most frequent classifications for each sensor:")
 for sensor, classification in classifications.items():
-    if sensor.startswith('Flex'): # Check if the column starts with 'Flex'
-        print(f"{sensor}: {classification}")
+    if sensor.startswith('Flex'):  # Check if the column starts with 'Flex'
+        if sensor == "Flex1":
+            print(f"{sensor} [ Pinky Finger ] : {classification}")
+        elif sensor == "Flex2":
+            print(f"{sensor} [ Ring Finger ]  : {classification}")
+        elif sensor == "Flex3":
+            print(f"{sensor} [ Middle Finger ]: {classification}")
+        elif sensor == "Flex4":
+            print(f"{sensor} [ Index Finger ] : {classification}")
+        else:
+            print(f"{sensor} [ Thumb ]        : {classification}")
+        
